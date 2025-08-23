@@ -1,9 +1,5 @@
-import { Chat } from "@/components/chat";
+import { FullChatApp } from "@/components/full-chat-app";
 
 export default function Page() {
-  return (
-    <div className="min-h-screen">
-      <Chat />
-    </div>
-  );
+  return <FullChatApp />;
 }

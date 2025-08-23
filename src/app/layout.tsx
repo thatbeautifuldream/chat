@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { QueryClientProvider } from "@/lib/providers/query-client-provider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { mono, sans, serif } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "AI Chat",
@@ -24,13 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          sans.fkGroteskNeue.variable,
+          mono.berkeleyMono.variable,
+          serif.ppEditorialNew.variable,
+          "bg-background font-sans text-foreground-light leading-relaxed antialiased",
+        )}
       >
-        <QueryClientProvider>
-          {children}
-        </QueryClientProvider>
+        <QueryClientProvider>{children}</QueryClientProvider>
       </body>
     </html>
   );
