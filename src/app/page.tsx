@@ -1,10 +1,9 @@
-"use client";
-
-import { useQuery } from "@tanstack/react-query";
-import { orpc } from "@/lib/orpc";
+import { Chat } from "@/components/chat";
 
 export default function Page() {
-  const healthQuery = useQuery(orpc.health.queryOptions());
-
-  return <div>{healthQuery.data?.status}</div>;
+  return (
+    <div className="min-h-screen">
+      <Chat />
+    </div>
+  );
 }
