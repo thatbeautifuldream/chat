@@ -1,31 +1,28 @@
-import localFont from "next/font/local";
+import { Geist, Geist_Mono, Instrument_Sans } from "next/font/google";
 
-const fkGroteskNeue = localFont({
-  src: "../../public/fonts/fk_grotesk_neue.woff2",
-  variable: "--font-fk-grotesk-neue",
-  display: "swap",
+export const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
 });
 
-const berkeleyMono = localFont({
-  src: "../../public/fonts/berkeley_mono.woff2",
-  variable: "--font-berkeley-mono",
-  display: "swap",
+export const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
-const ppEditorialNew = localFont({
-  src: "../../public/fonts/pp_editorial_new_variable.woff2",
-  variable: "--font-pp-editorial-new",
-  display: "swap",
+export const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-instrument-sans",
 });
 
 export const sans = {
-  fkGroteskNeue,
+  instrumentSans,
 };
 
 export const mono = {
-  berkeleyMono,
+  geistMono,
 };
 
 export const serif = {
-  ppEditorialNew,
+  geist,
 };

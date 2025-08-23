@@ -40,9 +40,9 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --font-sans: var(--font-fk-grotesk-neue);
-  --font-mono: var(--font-berkeley-mono);
-  --font-serif: var(--font-pp-editorial-new);
+  --font-sans: var(--font-instrument-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-geist);
 }
 
 :root {

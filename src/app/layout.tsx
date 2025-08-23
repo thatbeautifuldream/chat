@@ -18,9 +18,9 @@ export default function RootLayout({
     <html className="scroll-smooth" lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          sans.fkGroteskNeue.variable,
-          mono.berkeleyMono.variable,
-          serif.ppEditorialNew.variable,
+          sans.instrumentSans.variable,
+          mono.geistMono.variable,
+          serif.geist.variable,
           "bg-background font-sans text-foreground-light leading-relaxed antialiased",
         )}
       >
